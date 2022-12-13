@@ -21,7 +21,7 @@ jobs:
       - checkout
       - run: return 1
       - run:
-        - command: echo "Hello from fail"
+        - command: echo Hello from fail
         - when: on_fail
   
   save_hello_world_output:
