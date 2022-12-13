@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: echo "Say Hello" > output.txt
       - persist_to_workspace:
-          root: /tmp/workspace
+          root: .
           paths:
             - output.txt
   print_output_file:
@@ -23,7 +23,7 @@ jobs:
       - checkout
       - run: cat output.txt
       - attach_workspace:
-          at: /tmp/workspace
+          at: .
     
 workflows:
   # Name the workflow "welcome"
