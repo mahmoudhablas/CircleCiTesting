@@ -19,7 +19,8 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: return 1
+      - run: 
+        - command: return 1
       - run:
         - command: echo Hello from fail
         - when: on_fail
