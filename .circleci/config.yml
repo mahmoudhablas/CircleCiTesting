@@ -21,9 +21,9 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: cat ~/output.txt
+      - run: cat ./output.txt
       - attach_workspace:
-          root: ~/
+          root: .
           at: .
     
 workflows:
