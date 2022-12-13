@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: echo "Say Hello" > output.txt
       - persist_to_workspace:
-          root: .
+          root: ~/
           paths:
             - output.txt
   print_output_file:
@@ -21,8 +21,9 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - checkout
-      - run: cat output.txt
+      - run: cat ~/output.txt
       - attach_workspace:
+          root: ~/
           at: .
     
 workflows:
