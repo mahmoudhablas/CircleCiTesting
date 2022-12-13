@@ -15,8 +15,6 @@ jobs:
   print_world:
     docker:
       - image: circleci/node:13.8.0
-    environment:
-      - MY_NEW_VAR
     steps:
       - checkout
       - run: echo "Say Hello World ya $MY_NEW_VAR"
