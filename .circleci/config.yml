@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: echo "Say Hello" > output.txt
       - persist_to_workspace:
-          root: ~/
+          root: .
           paths:
             - output.txt
   print_output_file:
