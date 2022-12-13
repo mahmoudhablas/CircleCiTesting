@@ -12,9 +12,9 @@ jobs:
     steps:
       - checkout
       - run: echo "Say Hello" > output.txt
-    persist_to_workspace:
-      root: /tmp/workspace
-      paths:
+      - persist_to_workspace:
+          root: /tmp/workspace
+          paths:
             - output.txt
   print_output_file:
     docker:
@@ -22,8 +22,8 @@ jobs:
     steps:
       - checkout
       - run: cat output.txt
-    attach_workspace:
-      at: /tmp/workspace
+      - attach_workspace:
+          at: /tmp/workspace
     
 workflows:
   # Name the workflow "welcome"
